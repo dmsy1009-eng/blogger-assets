@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+<rect width="1200" height="675" fill="#f8fafc"/>
+<style>text{font-family:'Noto Sans CJK KR','Malgun Gothic',sans-serif;fill:#1f2937}.t{font-size:38px;font-weight:700}.s{font-size:20px;fill:#64748b}.h{font-size:24px;font-weight:700}.b{font-size:28px;font-weight:700}.sm{font-size:18px}.g{fill:#10966e}.bl{fill:#2e76d5}.or{fill:#b7791f}</style>
+<text x="60" y="78" class="t">오늘연락 시트는 실제 업무 목록처럼 씁니다</text>
+<text x="62" y="116" class="s">오늘 처리해야 할 고객만 모아 담당자와 상담상태를 한눈에 확인</text>
+
+<rect x="70" y="165" width="1060" height="380" rx="26" fill="#fff" stroke="#d7e1eb" stroke-width="2"/>
+<text x="105" y="215" class="h">오늘연락</text>
+<rect x="965" y="185" width="120" height="46" rx="23" fill="#e2f4ee"/>
+<text x="1025" y="215" text-anchor="middle" class="sm g">오늘 3명</text>
+
+<rect x="105" y="255" width="990" height="54" rx="10" fill="#eef4f8"/>
+<text x="130" y="289" class="sm">고객명</text><text x="295" y="289" class="sm">연락처</text><text x="535" y="289" class="sm">상담상태</text><text x="720" y="289" class="sm">담당자</text><text x="865" y="289" class="sm">메모</text>
+
+<g class="sm">
+<text x="130" y="352">김고객</text><text x="295" y="352">010-1111-2222</text>
+<rect x="515" y="326" width="120" height="38" rx="19" fill="#eaf4ff"/><text x="575" y="352" text-anchor="middle" class="bl">상담진행</text>
+<text x="720" y="352">박담당</text><text x="865" y="352">오후 통화 예정</text>
+
+<text x="130" y="417">박고객</text><text x="295" y="417">010-3333-4444</text>
+<rect x="515" y="391" width="120" height="38" rx="19" fill="#fff3d6"/><text x="575" y="417" text-anchor="middle" class="or">견적진행</text>
+<text x="720" y="417">박담당</text><text x="865" y="417">견적 확인 필요</text>
+
+<text x="130" y="482">이고객</text><text x="295" y="482">010-5555-6666</text>
+<rect x="515" y="456" width="120" height="38" rx="19" fill="#e2f4ee"/><text x="575" y="482" text-anchor="middle" class="g">방문예약</text>
+<text x="720" y="482">김담당</text><text x="865" y="482">일정 재확인</text>
+</g>
+
+<rect x="70" y="575" width="1060" height="58" rx="16" fill="#f0fdf8"/>
+<text x="600" y="612" text-anchor="middle" class="h g">전체 고객을 스크롤하지 않고 오늘 처리할 대상만 확인</text>
+<text x="60" y="660" class="sm" fill="#8a949f">workautomationlab · CRM 자동화</text>
+</svg>
