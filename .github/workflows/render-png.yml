@@ -1,0 +1,50 @@
+name: Render Blogger PNG assets
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'sources/**'
+      - '.github/workflows/render-png.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install SVG renderer and Korean fonts
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y librsvg2-bin fonts-noto-cjk
+
+      - name: Render PNG files
+        shell: bash
+        run: |
+          set -euo pipefail
+          slug='google-sheets-customer-inquiry-id'
+          src="sources/$slug"
+          out="posts/$slug"
+          mkdir -p "$out"
+          for n in 01 02 03 04 05 06; do
+            rsvg-convert -w 1200 -h 675 "$src/$n.svg" -o "$out/$n.png"
+          done
+          ls -lh "$out"
+
+      - name: Commit rendered PNG files
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add posts/google-sheets-customer-inquiry-id/*.png
+          if git diff --cached --quiet; then
+            echo 'No PNG changes to commit.'
+            exit 0
+          fi
+          git commit -m 'Render Blogger PNG assets'
+          git push
