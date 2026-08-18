@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+<rect width="1200" height="675" fill="#f8fafc"/>
+<style>text{font-family:'Noto Sans CJK KR','Malgun Gothic',sans-serif;fill:#1f2937}.t{font-size:38px;font-weight:700}.s{font-size:20px;fill:#64748b}.h{font-size:24px;font-weight:700}.b{font-size:28px;font-weight:700}.sm{font-size:18px}.g{fill:#10966e}.bl{fill:#2e76d5}.code{font-size:25px;font-weight:700}</style>
+<text x="60" y="78" class="t">FILTER + TODAY()로 오늘 대상만 추출합니다</text>
+<text x="62" y="116" class="s">재연락일이 오늘인 행만 자동으로 가져오는 가장 기본적인 수식</text>
+
+<rect x="70" y="175" width="1060" height="120" rx="24" fill="#ffffff" stroke="#d7e1eb" stroke-width="2"/>
+<text x="105" y="248" class="code">=FILTER(고객관리!A2:F, 고객관리!D2:D=TODAY())</text>
+
+<rect x="85" y="350" width="300" height="170" rx="24" fill="#eaf4ff"/>
+<text x="235" y="395" text-anchor="middle" class="h bl">가져올 범위</text>
+<text x="235" y="450" text-anchor="middle" class="b">고객관리!A2:F</text>
+<text x="235" y="487" text-anchor="middle" class="sm">고객명부터 상담메모까지</text>
+
+<rect x="450" y="350" width="300" height="170" rx="24" fill="#e2f4ee"/>
+<text x="600" y="395" text-anchor="middle" class="h g">조건</text>
+<text x="600" y="445" text-anchor="middle" class="b">D열 = TODAY()</text>
+<text x="600" y="487" text-anchor="middle" class="sm">재연락일이 오늘인 행만 선택</text>
+
+<rect x="815" y="350" width="300" height="170" rx="24" fill="#fff7e6"/>
+<text x="965" y="395" text-anchor="middle" class="h">자동 갱신</text>
+<text x="965" y="445" text-anchor="middle" class="b">날짜가 바뀌면</text>
+<text x="965" y="487" text-anchor="middle" class="sm">목록도 자동으로 변경</text>
+
+<path d="M385 435 L450 435" stroke="#94a3b8" stroke-width="4"/><polygon points="450,435 434,427 434,443" fill="#94a3b8"/>
+<path d="M750 435 L815 435" stroke="#94a3b8" stroke-width="4"/><polygon points="815,435 799,427 799,443" fill="#94a3b8"/>
+
+<text x="60" y="610" class="h g">매일 수식을 수정할 필요 없이 TODAY()가 오늘 날짜를 자동으로 갱신합니다.</text>
+<text x="60" y="652" class="sm" fill="#8a949f">workautomationlab · CRM 자동화</text>
+</svg>
