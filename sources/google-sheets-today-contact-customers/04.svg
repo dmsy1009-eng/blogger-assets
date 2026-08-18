@@ -27,8 +27,9 @@
 <rect x="925" y="405" width="220" height="120" rx="24" fill="#fdeceb"/>
 <text x="1035" y="453" text-anchor="middle" class="h rd">종료</text><text x="1035" y="492" text-anchor="middle" class="sm">상담상태 종결</text>
 
-<path d="M1035 145 L1035 110 L175 110 L175 240" stroke="#10966e" stroke-width="4" fill="none" stroke-dasharray="10 10"/>
+<path d="M925 205 L875 205 L875 185 L175 185 L175 240" stroke="#10966e" stroke-width="4" fill="none" stroke-dasharray="10 10"/>
 <polygon points="175,240 167,224 183,224" fill="#10966e"/>
+<text x="530" y="174" text-anchor="middle" class="sm g">다음 재연락일이 되면 다시 목록에 표시</text>
 
 <text x="70" y="585" class="h g">재연락일을 갱신해야 이미 처리한 고객이 오늘 목록에 계속 남지 않습니다.</text>
 <text x="60" y="652" class="sm" fill="#8a949f">workautomationlab · CRM 자동화</text>
