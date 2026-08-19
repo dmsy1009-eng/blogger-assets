@@ -7,6 +7,7 @@ on:
       - 'sources/**/*.svg'
       - 'sources/**/*.json'
       - 'scripts/generate-moneybrief-thumbnail.js'
+      - 'scripts/generate-moneybrief-body-card.js'
       - '.github/workflows/render-png.yml'
   workflow_dispatch:
 
@@ -34,6 +35,9 @@ jobs:
 
       - name: Generate MoneyBrief SVG thumbnails
         run: node scripts/generate-moneybrief-thumbnail.js
+
+      - name: Generate MoneyBrief SVG body cards
+        run: node scripts/generate-moneybrief-body-card.js
 
       - name: Install SVG renderer and Korean fonts
         run: |
