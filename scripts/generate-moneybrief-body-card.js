@@ -29,8 +29,10 @@ function renderComparison(config) {
   const right = config.right || {};
   const difference = config.difference || '';
   const note = config.note || '';
+  const field1Label = config.field1Label || '월 지원금';
+  const field2Label = config.field2Label || '연 지원금';
 
-  const card = (x, label, rate, monthly, annual, accent) => `
+  const card = (x, label, rate, metric1, metric2, accent) => `
     <g transform="translate(${x},215)" filter="url(#shadow)">
       <rect width="430" height="270" rx="28" fill="#ffffff" stroke="${accent}" stroke-width="3"/>
       <rect width="430" height="72" rx="28" fill="${accent}"/>
@@ -40,13 +42,13 @@ function renderComparison(config) {
       <text x="342" y="49" text-anchor="middle" class="kr rate" fill="#ffffff">${escapeXml(rate)}</text>
       <circle cx="72" cy="135" r="35" fill="#eef7f8"/>
       <text x="72" y="149" text-anchor="middle" class="kr icon">₩</text>
-      <text x="125" y="120" class="kr small">월 지원금</text>
-      <text x="125" y="162" class="kr amount" fill="${accent}">${escapeXml(monthly)}</text>
+      <text x="125" y="120" class="kr small">${escapeXml(field1Label)}</text>
+      <text x="125" y="162" class="kr amount" fill="${accent}">${escapeXml(metric1)}</text>
       <line x1="35" y1="188" x2="395" y2="188" stroke="#dbe5ea" stroke-width="2"/>
       <circle cx="72" cy="230" r="35" fill="#eef7f8"/>
-      <text x="72" y="244" text-anchor="middle" class="kr icon">∑</text>
-      <text x="125" y="215" class="kr small">연 지원금</text>
-      <text x="125" y="257" class="kr amount" fill="${accent}">${escapeXml(annual)}</text>
+      <text x="72" y="244" text-anchor="middle" class="kr icon">✓</text>
+      <text x="125" y="215" class="kr small">${escapeXml(field2Label)}</text>
+      <text x="125" y="257" class="kr amount" fill="${accent}">${escapeXml(metric2)}</text>
     </g>`;
 
   return `<?xml version="1.0" encoding="UTF-8"?>
@@ -63,12 +65,12 @@ function renderComparison(config) {
       .kr{font-family:'Noto Sans CJK KR','Noto Sans KR',sans-serif;}
       .title{font-size:58px;font-weight:900;fill:#071a3d;letter-spacing:-2.5px;}
       .subtitle{font-size:27px;font-weight:700;fill:#506579;}
-      .label{font-size:33px;font-weight:900;}
-      .rate{font-size:31px;font-weight:900;}
+      .label{font-size:30px;font-weight:900;letter-spacing:-1px;}
+      .rate{font-size:28px;font-weight:900;}
       .small{font-size:21px;font-weight:700;fill:#30475e;}
-      .amount{font-size:38px;font-weight:900;letter-spacing:-1px;}
+      .amount{font-size:34px;font-weight:900;letter-spacing:-1px;}
       .icon{font-size:31px;font-weight:900;fill:#0b2752;}
-      .difference{font-size:33px;font-weight:900;fill:#0b6f78;}
+      .difference{font-size:29px;font-weight:900;fill:#0b6f78;}
       .note{font-size:18px;font-weight:600;fill:#6a7885;}
     </style>
   </defs>
@@ -77,8 +79,8 @@ function renderComparison(config) {
   <text x="600" y="132" text-anchor="middle" class="kr subtitle">${escapeXml(subtitle)}</text>
   <circle cx="600" cy="345" r="43" fill="#071a3d"/>
   <text x="600" y="356" text-anchor="middle" class="kr" font-size="28" font-weight="900" fill="#ffffff">VS</text>
-  ${card(80, left.label || '일반형', left.rate || '', left.monthly || '', left.annual || '', '#0b2d62')}
-  ${card(690, right.label || '우대형', right.rate || '', right.monthly || '', right.annual || '', '#0f9c9a')}
+  ${card(80, left.label || 'A', left.rate || '', left.monthly || '', left.annual || '', '#0b2d62')}
+  ${card(690, right.label || 'B', right.rate || '', right.monthly || '', right.annual || '', '#0f9c9a')}
   <g transform="translate(180,525)" filter="url(#shadow)">
     <rect width="840" height="82" rx="24" fill="#ffffff" stroke="#16a7ad" stroke-width="3"/>
     <path d="M35 53 L55 33 L73 44 L99 18" fill="none" stroke="#0f9c9a" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
