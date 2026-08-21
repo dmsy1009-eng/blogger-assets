@@ -1,0 +1,104 @@
+{
+  "generatedAt": "2026-08-21T14:12:43.539Z",
+  "result": "PASS",
+  "gate": "SOURCE_PASS -> RENDER_PASS -> VISUAL_QA_PASS",
+  "policy": {
+    "publishRequiresHumanReview": true,
+    "checks": [
+      "numeric-unit",
+      "difference-safe-area",
+      "png-exists",
+      "png-dimension",
+      "png-nonempty"
+    ],
+    "humanChecks": [
+      "text-overlap",
+      "text-clipping",
+      "mobile-readability",
+      "source-number-match",
+      "search-description"
+    ]
+  },
+  "items": [
+    {
+      "source": "housing-supply-813-2026/body-02.json",
+      "png": "posts/moneybrief/housing-supply-813-2026/02.png",
+      "result": "PASS",
+      "checks": [
+        "numeric-unit:PASS",
+        "difference-safe-area:PASS",
+        "png-dimension:PASS",
+        "png-nonempty:PASS"
+      ],
+      "pngMeta": {
+        "width": 1200,
+        "height": 675,
+        "bytes": 105081
+      }
+    },
+    {
+      "source": "housing-supply-813-2026/body-03.json",
+      "png": "posts/moneybrief/housing-supply-813-2026/03.png",
+      "result": "PASS",
+      "checks": [
+        "numeric-unit:PASS",
+        "difference-safe-area:PASS",
+        "png-dimension:PASS",
+        "png-nonempty:PASS"
+      ],
+      "pngMeta": {
+        "width": 1200,
+        "height": 675,
+        "bytes": 106303
+      }
+    },
+    {
+      "source": "housing-supply-813-2026/body-04.json",
+      "png": "posts/moneybrief/housing-supply-813-2026/04.png",
+      "result": "PASS",
+      "checks": [
+        "numeric-unit:PASS",
+        "difference-safe-area:PASS",
+        "png-dimension:PASS",
+        "png-nonempty:PASS"
+      ],
+      "pngMeta": {
+        "width": 1200,
+        "height": 675,
+        "bytes": 114555
+      }
+    },
+    {
+      "source": "youth-future-savings-leap-switch-round2-2026/body-02.json",
+      "png": "posts/moneybrief/youth-future-savings-leap-switch-round2-2026/02.png",
+      "result": "PASS",
+      "checks": [
+        "numeric-unit:PASS",
+        "difference-safe-area:PASS",
+        "png-dimension:PASS",
+        "png-nonempty:PASS"
+      ],
+      "pngMeta": {
+        "width": 1200,
+        "height": 675,
+        "bytes": 109019
+      }
+    },
+    {
+      "source": "youth-future-savings-round2-2026/body-02.json",
+      "png": "posts/moneybrief/youth-future-savings-round2-2026/02.png",
+      "result": "PASS",
+      "checks": [
+        "numeric-unit:PASS",
+        "difference-safe-area:PASS",
+        "png-dimension:PASS",
+        "png-nonempty:PASS"
+      ],
+      "pngMeta": {
+        "width": 1200,
+        "height": 675,
+        "bytes": 102732
+      }
+    }
+  ]
+}
