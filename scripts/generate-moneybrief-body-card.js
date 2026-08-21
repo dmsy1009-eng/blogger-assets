@@ -22,6 +22,68 @@ function walk(dir, out = []) {
   return out;
 }
 
+function splitDifference(value, maxChars = 31) {
+  const text = String(value || '').trim();
+  if (!text) return [''];
+  if (text.length <= maxChars) return [text];
+
+  const words = text.split(/\s+/);
+  const lines = [];
+  let line = '';
+  for (const word of words) {
+    const candidate = line ? `${line} ${word}` : word;
+    if (candidate.length <= maxChars) {
+      line = candidate;
+      continue;
+    }
+    if (line) lines.push(line);
+    line = word;
+  }
+  if (line) lines.push(line);
+  return lines.slice(0, 2);
+}
+
+function validateComparison(config, sourceName) {
+  const required = [
+    ['title', config.title],
+    ['left.label', config.left?.label],
+    ['left.monthly', config.left?.monthly],
+    ['left.annual', config.left?.annual],
+    ['right.label', config.right?.label],
+    ['right.monthly', config.right?.monthly],
+    ['right.annual', config.right?.annual],
+    ['difference', config.difference],
+    ['note', config.note],
+  ];
+
+  const missing = required.filter(([, value]) => !String(value || '').trim()).map(([name]) => name);
+  if (missing.length) throw new Error(`${sourceName}: 필수 필드 누락: ${missing.join(', ')}`);
+
+  const limits = [
+    ['title', config.title, 28],
+    ['subtitle', config.subtitle, 44],
+    ['left.label', config.left?.label, 18],
+    ['right.label', config.right?.label, 18],
+    ['left.monthly', config.left?.monthly, 16],
+    ['right.monthly', config.right?.monthly, 16],
+    ['left.annual', config.left?.annual, 20],
+    ['right.annual', config.right?.annual, 20],
+    ['difference', config.difference, 62],
+    ['note', config.note, 86],
+  ];
+
+  const tooLong = limits.filter(([, value, max]) => String(value || '').length > max);
+  if (tooLong.length) {
+    throw new Error(`${sourceName}: 레이아웃 안전길이 초과: ${tooLong.map(([name, value, max]) => `${name}=${String(value).length}/${max}`).join(', ')}`);
+  }
+
+  const allText = JSON.stringify(config);
+  const unitlessMan = allText.match(/\d+만(?!호|원|명|개|%|회|년|개월|㎡|km|톤|건)/g);
+  if (unitlessMan) {
+    throw new Error(`${sourceName}: 단위 없는 '만' 수치 발견: ${[...new Set(unitlessMan)].join(', ')}`);
+  }
+}
+
 function renderComparison(config) {
   const title = config.title || '핵심 비교';
   const subtitle = config.subtitle || '';
@@ -31,6 +93,9 @@ function renderComparison(config) {
   const note = config.note || '';
   const field1Label = config.field1Label || '월 지원금';
   const field2Label = config.field2Label || '연 지원금';
+  const differenceLines = splitDifference(difference);
+  const differenceFontSize = differenceLines.length > 1 ? 24 : 27;
+  const differenceY = differenceLines.length > 1 ? 35 : 56;
 
   const card = (x, label, rate, metric1, metric2, accent) => `
     <g transform="translate(${x},215)" filter="url(#shadow)">
@@ -51,6 +116,10 @@ function renderComparison(config) {
       <text x="125" y="257" class="kr amount" fill="${accent}">${escapeXml(metric2)}</text>
     </g>`;
 
+  const differenceText = differenceLines
+    .map((line, index) => `<tspan x="118" dy="${index === 0 ? 0 : 31}">${escapeXml(line)}</tspan>`)
+    .join('');
+
   return `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
   <defs>
@@ -70,7 +139,7 @@ function renderComparison(config) {
       .small{font-size:21px;font-weight:700;fill:#30475e;}
       .amount{font-size:34px;font-weight:900;letter-spacing:-1px;}
       .icon{font-size:31px;font-weight:900;fill:#0b2752;}
-      .difference{font-size:29px;font-weight:900;fill:#0b6f78;}
+      .difference{font-weight:900;fill:#0b6f78;}
       .note{font-size:18px;font-weight:600;fill:#6a7885;}
     </style>
   </defs>
@@ -81,12 +150,13 @@ function renderComparison(config) {
   <text x="600" y="356" text-anchor="middle" class="kr" font-size="28" font-weight="900" fill="#ffffff">VS</text>
   ${card(80, left.label || 'A', left.rate || '', left.monthly || '', left.annual || '', '#0b2d62')}
   ${card(690, right.label || 'B', right.rate || '', right.monthly || '', right.annual || '', '#0f9c9a')}
-  <g transform="translate(180,525)" filter="url(#shadow)">
-    <rect width="840" height="82" rx="24" fill="#ffffff" stroke="#16a7ad" stroke-width="3"/>
-    <path d="M35 53 L55 33 L73 44 L99 18" fill="none" stroke="#0f9c9a" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-    <text x="460" y="53" text-anchor="middle" class="kr difference">${escapeXml(difference)}</text>
+  <g transform="translate(180,520)" filter="url(#shadow)">
+    <rect width="840" height="94" rx="24" fill="#ffffff" stroke="#16a7ad" stroke-width="3"/>
+    <circle cx="58" cy="47" r="26" fill="#0f9c9a"/>
+    <path d="M45 47 L54 56 L72 36" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="118" y="${differenceY}" class="kr difference" font-size="${differenceFontSize}">${differenceText}</text>
   </g>
-  <text x="600" y="645" text-anchor="middle" class="kr note">※ ${escapeXml(note)}</text>
+  <text x="600" y="650" text-anchor="middle" class="kr note">※ ${escapeXml(note)}</text>
 </svg>`;
 }
 
@@ -101,8 +171,9 @@ for (const jsonFile of files) {
   if ((config.type || 'comparison') !== 'comparison') {
     throw new Error(`지원하지 않는 body card type: ${config.type}`);
   }
+  validateComparison(config, path.relative(process.cwd(), jsonFile));
   const stem = path.basename(jsonFile, '.json').replace(/^body-/, '');
   const svgFile = path.join(path.dirname(jsonFile), `${stem}.svg`);
   fs.writeFileSync(svgFile, renderComparison(config), 'utf8');
-  console.log(`Generated: ${path.relative(process.cwd(), svgFile)}`);
+  console.log(`Generated + source QA PASS: ${path.relative(process.cwd(), svgFile)}`);
 }
