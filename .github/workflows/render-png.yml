@@ -8,6 +8,7 @@ on:
       - 'sources/**/*.json'
       - 'scripts/generate-moneybrief-thumbnail.js'
       - 'scripts/generate-moneybrief-body-card.js'
+      - 'scripts/validate-moneybrief-render.js'
       - '.github/workflows/render-png.yml'
   workflow_dispatch:
 
@@ -36,7 +37,7 @@ jobs:
       - name: Generate MoneyBrief SVG thumbnails
         run: node scripts/generate-moneybrief-thumbnail.js
 
-      - name: Generate MoneyBrief SVG body cards
+      - name: Generate MoneyBrief SVG body cards + source QA
         run: node scripts/generate-moneybrief-body-card.js
 
       - name: Install SVG renderer and Korean fonts
@@ -71,17 +72,20 @@ jobs:
 
           echo "Rendered SVG count: $count"
 
-      - name: Commit rendered PNG files
+      - name: MoneyBrief visual QA gate
+        run: node scripts/validate-moneybrief-render.js
+
+      - name: Commit rendered PNG files and QA report
         shell: bash
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add posts
+          git add posts reports
 
           if git diff --cached --quiet; then
-            echo 'No PNG changes to commit.'
+            echo 'No PNG/report changes to commit.'
             exit 0
           fi
 
-          git commit -m 'Render Blogger PNG assets'
+          git commit -m 'Render Blogger PNG assets after visual QA PASS'
           git push
