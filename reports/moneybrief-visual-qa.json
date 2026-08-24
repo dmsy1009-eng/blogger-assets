@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-21T14:12:43.539Z",
+  "generatedAt": "2026-08-24T01:52:41.502Z",
   "result": "PASS",
   "gate": "SOURCE_PASS -> RENDER_PASS -> VISUAL_QA_PASS",
   "policy": {
@@ -66,6 +66,38 @@
         "width": 1200,
         "height": 675,
         "bytes": 114555
+      }
+    },
+    {
+      "source": "isa-2026-reform-status/body-02.json",
+      "png": "posts/moneybrief/isa-2026-reform-status/02.png",
+      "result": "PASS",
+      "checks": [
+        "numeric-unit:PASS",
+        "difference-safe-area:PASS",
+        "png-dimension:PASS",
+        "png-nonempty:PASS"
+      ],
+      "pngMeta": {
+        "width": 1200,
+        "height": 675,
+        "bytes": 115746
+      }
+    },
+    {
+      "source": "isa-2026-reform-status/body-03.json",
+      "png": "posts/moneybrief/isa-2026-reform-status/03.png",
+      "result": "PASS",
+      "checks": [
+        "numeric-unit:PASS",
+        "difference-safe-area:PASS",
+        "png-dimension:PASS",
+        "png-nonempty:PASS"
+      ],
+      "pngMeta": {
+        "width": 1200,
+        "height": 675,
+        "bytes": 111454
       }
     },
     {
