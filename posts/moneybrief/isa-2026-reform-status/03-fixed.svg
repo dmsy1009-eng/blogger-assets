@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#f5f9fa"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0a2342" flood-opacity="0.10"/></filter>
+    <style>
+      .kr{font-family:'Noto Sans CJK KR','NanumSquare','Malgun Gothic',sans-serif;}
+      .title{font-size:52px;font-weight:900;fill:#071a3d;letter-spacing:-2px;}
+      .subtitle{font-size:25px;font-weight:700;fill:#506579;}
+      .header{font-size:28px;font-weight:900;fill:#fff;}
+      .badge{font-size:22px;font-weight:900;fill:#fff;}
+      .small{font-size:20px;font-weight:700;fill:#30475e;}
+      .amount{font-size:32px;font-weight:900;letter-spacing:-1px;}
+      .icon{font-size:30px;font-weight:900;fill:#0b2752;}
+      .bottom{font-size:25px;font-weight:900;fill:#087978;}
+      .note{font-size:17px;font-weight:600;fill:#6a7885;}
+    </style>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <text x="600" y="80" text-anchor="middle" class="kr title">새로 나온 정부안은 생산적금융 ISA</text>
+  <text x="600" y="121" text-anchor="middle" class="kr subtitle">6천만원 확대안과 다른 제도입니다</text>
+  <g transform="translate(70,175)" filter="url(#shadow)">
+    <rect width="440" height="280" rx="26" fill="#fff" stroke="#0b2d62" stroke-width="3"/>
+    <path d="M0 26Q0 0 26 0H414Q440 0 440 26V72H0Z" fill="#0b2d62"/>
+    <text x="35" y="47" class="kr header">현행 일반 ISA</text>
+    <rect x="332" y="14" width="78" height="44" rx="22" fill="#ffffff" fill-opacity="0.18"/>
+    <text x="371" y="44" text-anchor="middle" class="kr badge">현행</text>
+    <circle cx="67" cy="132" r="34" fill="#eef7f8"/><text x="67" y="145" text-anchor="middle" class="kr icon">₩</text>
+    <text x="120" y="112" class="kr small">납입한도</text><text x="120" y="155" class="kr amount" fill="#0b2d62">연 2천만원</text>
+    <line x1="32" y1="183" x2="408" y2="183" stroke="#dbe5ea" stroke-width="2"/>
+    <circle cx="67" cy="232" r="34" fill="#eef7f8"/><text x="67" y="245" text-anchor="middle" class="kr icon">✓</text>
+    <text x="120" y="214" class="kr small">비과세 혜택</text><text x="120" y="255" class="kr amount" fill="#0b2d62">200·400만원</text>
+  </g>
+  <circle cx="600" cy="315" r="42" fill="#071a3d"/><text x="600" y="326" text-anchor="middle" class="kr" font-size="27" font-weight="900" fill="#fff">VS</text>
+  <g transform="translate(690,175)" filter="url(#shadow)">
+    <rect width="440" height="280" rx="26" fill="#fff" stroke="#0f9c9a" stroke-width="3"/>
+    <path d="M0 26Q0 0 26 0H414Q440 0 440 26V72H0Z" fill="#0f9c9a"/>
+    <text x="35" y="47" class="kr header">생산적금융 ISA</text>
+    <rect x="332" y="14" width="78" height="44" rx="22" fill="#ffffff" fill-opacity="0.20"/>
+    <text x="371" y="44" text-anchor="middle" class="kr badge">정부안</text>
+    <circle cx="67" cy="132" r="34" fill="#eef7f8"/><text x="67" y="145" text-anchor="middle" class="kr icon">₩</text>
+    <text x="120" y="112" class="kr small">납입한도</text><text x="120" y="155" class="kr amount" fill="#0f9c9a">연 2천만원</text>
+    <line x1="32" y1="183" x2="408" y2="183" stroke="#dbe5ea" stroke-width="2"/>
+    <circle cx="67" cy="232" r="34" fill="#eef7f8"/><text x="67" y="245" text-anchor="middle" class="kr icon">✓</text>
+    <text x="120" y="214" class="kr small">비과세 혜택</text><text x="120" y="255" class="kr amount" fill="#0f9c9a">이자·배당 전액</text>
+  </g>
+  <g transform="translate(190,500)" filter="url(#shadow)">
+    <rect width="820" height="88" rx="22" fill="#fff" stroke="#16a7ad" stroke-width="3"/>
+    <circle cx="52" cy="44" r="25" fill="#0f9c9a"/><path d="M40 44l9 9 17-20" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="105" y="54" class="kr bottom">정부안은 총 2억원 · 국내주식 중심 · 최대 10년</text>
+  </g>
+  <text x="600" y="632" text-anchor="middle" class="kr note">※ 2026 세제개편안 기준이며 국회 통과 전에는 현행 제도가 아닙니다</text>
+</svg>
