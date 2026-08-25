@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+<rect width="1200" height="675" fill="#f8fafc"/>
+<text x="55" y="68" fill="#111827" font-family="Arial,'Noto Sans KR',sans-serif" font-size="38" font-weight="800">FILTER와 QUERY, 언제 무엇을 쓸까?</text>
+<text x="55" y="108" fill="#64748b" font-family="Arial,'Noto Sans KR',sans-serif" font-size="21">상담상태가 S열인 예시 CRM 기준</text>
+<rect x="55" y="150" width="520" height="390" rx="18" fill="#ffffff" stroke="#bfdbfe"/>
+<text x="85" y="198" fill="#1d4ed8" font-family="Arial,'Noto Sans KR',sans-serif" font-size="29" font-weight="800">FILTER</text>
+<text x="85" y="235" fill="#475569" font-family="Arial,'Noto Sans KR',sans-serif" font-size="20">한 가지 조건으로 빠르게 추출할 때</text>
+<rect x="85" y="275" width="460" height="94" rx="12" fill="#eff6ff"/>
+<text x="105" y="315" fill="#1e3a8a" font-family="Consolas,monospace" font-size="18">=FILTER(A2:AO, S2:S=&quot;신규문의&quot;)</text>
+<text x="105" y="347" fill="#64748b" font-family="Arial,'Noto Sans KR',sans-serif" font-size="17">상태 변경 즉시 결과 반영</text>
+<text x="90" y="420" fill="#334155" font-family="Arial,'Noto Sans KR',sans-serif" font-size="19">• 단순하고 직관적</text>
+<text x="90" y="458" fill="#334155" font-family="Arial,'Noto Sans KR',sans-serif" font-size="19">• 특정 상태 전용 화면에 적합</text>
+<rect x="625" y="150" width="520" height="390" rx="18" fill="#ffffff" stroke="#bbf7d0"/>
+<text x="655" y="198" fill="#15803d" font-family="Arial,'Noto Sans KR',sans-serif" font-size="29" font-weight="800">QUERY</text>
+<text x="655" y="235" fill="#475569" font-family="Arial,'Noto Sans KR',sans-serif" font-size="20">열 선택·여러 조건·정렬까지 할 때</text>
+<rect x="655" y="275" width="460" height="120" rx="12" fill="#f0fdf4"/>
+<text x="675" y="312" fill="#14532d" font-family="Consolas,monospace" font-size="16">=QUERY(A:AO,</text>
+<text x="675" y="342" fill="#14532d" font-family="Consolas,monospace" font-size="16">&quot;select A,B,C,S where S='상담진행'&quot;,</text>
+<text x="675" y="372" fill="#14532d" font-family="Consolas,monospace" font-size="16">1)</text>
+<text x="660" y="438" fill="#334155" font-family="Arial,'Noto Sans KR',sans-serif" font-size="19">• 필요한 열만 노출</text>
+<text x="660" y="476" fill="#334155" font-family="Arial,'Noto Sans KR',sans-serif" font-size="19">• 정렬·복수 조건 확장에 유리</text>
+<rect x="55" y="580" width="1090" height="62" rx="12" fill="#fff7ed"/>
+<text x="83" y="619" fill="#9a3412" font-family="Arial,'Noto Sans KR',sans-serif" font-size="21" font-weight="700">운영 규칙이 우선: 상태값은 드롭다운으로 표준화하고 변경 담당자·시점을 명확히 합니다.</text>
+</svg>
