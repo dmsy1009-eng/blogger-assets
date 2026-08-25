@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+<rect width="1200" height="675" fill="#ffffff"/>
+<text x="55" y="70" fill="#111827" font-family="Arial,'Noto Sans KR',sans-serif" font-size="38" font-weight="800">원본 CRM과 조회 화면을 분리하는 구조</text>
+<text x="55" y="110" fill="#6b7280" font-family="Arial,'Noto Sans KR',sans-serif" font-size="21">원본을 복사하지 않고 상담상태를 기준으로 화면만 나눕니다.</text>
+<rect x="55" y="160" width="420" height="390" rx="16" fill="#f9fafb" stroke="#d1d5db"/>
+<text x="85" y="205" fill="#166534" font-family="Arial,'Noto Sans KR',sans-serif" font-size="25" font-weight="700">원본 시트</text>
+<rect x="85" y="235" width="360" height="48" fill="#e5e7eb"/>
+<text x="100" y="266" fill="#374151" font-family="Arial,'Noto Sans KR',sans-serif" font-size="17">문의일   고객명   연락처   상담상태</text>
+<g font-family="Arial,'Noto Sans KR',sans-serif" font-size="18" fill="#374151">
+<text x="100" y="320">08/25   고객A   010-****   신규문의</text>
+<text x="100" y="365">08/25   고객B   010-****   상담진행</text>
+<text x="100" y="410">08/24   고객C   010-****   견적진행</text>
+<text x="100" y="455">08/24   고객D   010-****   종결</text>
+</g>
+<path d="M505 355 H660" stroke="#16a34a" stroke-width="8"/><path d="M640 335 L670 355 L640 375 Z" fill="#16a34a"/>
+<rect x="700" y="160" width="445" height="390" rx="16" fill="#f0fdf4" stroke="#86efac"/>
+<text x="730" y="205" fill="#166534" font-family="Arial,'Noto Sans KR',sans-serif" font-size="25" font-weight="700">조회 화면</text>
+<rect x="730" y="240" rx="12" width="180" height="64" fill="#dcfce7"/><text x="770" y="280" fill="#166534" font-family="Arial,'Noto Sans KR',sans-serif" font-size="21" font-weight="700">신규문의</text>
+<rect x="930" y="240" rx="12" width="180" height="64" fill="#dbeafe"/><text x="970" y="280" fill="#1d4ed8" font-family="Arial,'Noto Sans KR',sans-serif" font-size="21" font-weight="700">상담 진행</text>
+<rect x="730" y="330" rx="12" width="180" height="64" fill="#ffedd5"/><text x="770" y="370" fill="#c2410c" font-family="Arial,'Noto Sans KR',sans-serif" font-size="21" font-weight="700">견적 진행</text>
+<rect x="930" y="330" rx="12" width="180" height="64" fill="#f3f4f6"/><text x="984" y="370" fill="#4b5563" font-family="Arial,'Noto Sans KR',sans-serif" font-size="21" font-weight="700">종결</text>
+<text x="730" y="455" fill="#374151" font-family="Arial,'Noto Sans KR',sans-serif" font-size="20">상태값만 바뀌면 조회 결과도 즉시 변경</text>
+<text x="730" y="495" fill="#6b7280" font-family="Arial,'Noto Sans KR',sans-serif" font-size="18">고객 행 이동·복사 불필요</text>
+<rect x="55" y="585" width="1090" height="56" rx="12" fill="#ecfdf5"/>
+<text x="85" y="621" fill="#166534" font-family="Arial,'Noto Sans KR',sans-serif" font-size="21" font-weight="700">핵심: 데이터의 Source of Truth는 한 곳에 유지하고, 조회만 자동화합니다.</text>
+</svg>
