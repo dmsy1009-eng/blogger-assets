@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-24T01:52:41.502Z",
+  "generatedAt": "2026-08-27T02:52:01.500Z",
   "result": "PASS",
   "gate": "SOURCE_PASS -> RENDER_PASS -> VISUAL_QA_PASS",
   "policy": {
@@ -97,7 +97,87 @@
       "pngMeta": {
         "width": 1200,
         "height": 675,
-        "bytes": 111454
+        "bytes": 108189
+      }
+    },
+    {
+      "source": "why-study-economics/body-01.json",
+      "png": "posts/moneybrief/why-study-economics/01.png",
+      "result": "PASS",
+      "checks": [
+        "numeric-unit:PASS",
+        "difference-safe-area:PASS",
+        "png-dimension:PASS",
+        "png-nonempty:PASS"
+      ],
+      "pngMeta": {
+        "width": 1200,
+        "height": 675,
+        "bytes": 100061
+      }
+    },
+    {
+      "source": "why-study-economics/body-02.json",
+      "png": "posts/moneybrief/why-study-economics/02.png",
+      "result": "PASS",
+      "checks": [
+        "numeric-unit:PASS",
+        "difference-safe-area:PASS",
+        "png-dimension:PASS",
+        "png-nonempty:PASS"
+      ],
+      "pngMeta": {
+        "width": 1200,
+        "height": 675,
+        "bytes": 97021
+      }
+    },
+    {
+      "source": "why-study-economics/body-03.json",
+      "png": "posts/moneybrief/why-study-economics/03.png",
+      "result": "PASS",
+      "checks": [
+        "numeric-unit:PASS",
+        "difference-safe-area:PASS",
+        "png-dimension:PASS",
+        "png-nonempty:PASS"
+      ],
+      "pngMeta": {
+        "width": 1200,
+        "height": 675,
+        "bytes": 100175
+      }
+    },
+    {
+      "source": "why-study-economics/body-04.json",
+      "png": "posts/moneybrief/why-study-economics/04.png",
+      "result": "PASS",
+      "checks": [
+        "numeric-unit:PASS",
+        "difference-safe-area:PASS",
+        "png-dimension:PASS",
+        "png-nonempty:PASS"
+      ],
+      "pngMeta": {
+        "width": 1200,
+        "height": 675,
+        "bytes": 108500
+      }
+    },
+    {
+      "source": "why-study-economics/body-05.json",
+      "png": "posts/moneybrief/why-study-economics/05.png",
+      "result": "PASS",
+      "checks": [
+        "numeric-unit:PASS",
+        "difference-safe-area:PASS",
+        "png-dimension:PASS",
+        "png-nonempty:PASS"
+      ],
+      "pngMeta": {
+        "width": 1200,
+        "height": 675,
+        "bytes": 108962
       }
     },
     {
