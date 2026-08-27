@@ -1,0 +1,21 @@
+{
+  "type": "comparison",
+  "title": "경제 공부의 목적은 예측이 아닙니다",
+  "subtitle": "틀리지 않는 예측보다 대응 기준이 중요합니다",
+  "field1Label": "관점",
+  "field2Label": "결과",
+  "left": {
+    "label": "예측 중심",
+    "rate": "GUESS",
+    "monthly": "정답을 찾음",
+    "annual": "틀리면 흔들림"
+  },
+  "right": {
+    "label": "대응 중심",
+    "rate": "RULE",
+    "monthly": "원인을 확인",
+    "annual": "기준대로 대응"
+  },
+  "difference": "미래를 맞히려 하기보다 상황이 바뀌었을 때 행동할 기준을 만드는 것이 핵심입니다",
+  "note": "경제 공부는 예언이 아니라 내 돈에 영향을 주는 변화를 이해하기 위한 훈련입니다."
+}
