@@ -1,0 +1,21 @@
+{
+  "type": "comparison",
+  "title": "우리는 이미 경제활동 중입니다",
+  "subtitle": "소비·저축·대출·투자가 모두 연결됩니다",
+  "field1Label": "구매 기준",
+  "field2Label": "저축 방식",
+  "left": {
+    "label": "그냥 소비",
+    "rate": "DAILY",
+    "monthly": "가격만 확인",
+    "annual": "남는 돈 저축"
+  },
+  "right": {
+    "label": "경제적 판단",
+    "rate": "THINK",
+    "monthly": "물가까지 확인",
+    "annual": "목표별로 배분"
+  },
+  "difference": "매일 하는 소비와 저축도 금리·물가·환율의 영향을 받습니다",
+  "note": "경제는 뉴스 속 이야기가 아니라 월급과 생활비에서 매일 작동합니다."
+}
