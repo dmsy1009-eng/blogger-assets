@@ -1,0 +1,21 @@
+{
+  "type": "comparison",
+  "title": "경제를 공부하기 전과 후",
+  "subtitle": "같은 월급도 판단 기준이 달라집니다",
+  "field1Label": "경제 뉴스",
+  "field2Label": "돈 관리",
+  "left": {
+    "label": "경제를 모를 때",
+    "rate": "BEFORE",
+    "monthly": "뉴스는 남의 이야기",
+    "annual": "남는 돈만 저축"
+  },
+  "right": {
+    "label": "경제를 공부할 때",
+    "rate": "AFTER",
+    "monthly": "내 생활과 연결",
+    "annual": "목적별 자산배분"
+  },
+  "difference": "경제 공부의 핵심은 용어 암기가 아니라 선택의 기준 만들기",
+  "note": "시장 예측보다 중요한 것은 변화의 원인을 이해하고 대응하는 힘입니다."
+}
