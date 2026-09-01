@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-27T02:52:26.677Z",
+  "generatedAt": "2026-09-01T01:53:25.019Z",
   "result": "PASS",
   "gate": "SOURCE_PASS -> RENDER_PASS -> VISUAL_QA_PASS",
   "policy": {
@@ -20,6 +20,22 @@
     ]
   },
   "items": [
+    {
+      "source": "housing-subscription-account-conversion-2026/body-02.json",
+      "png": "posts/moneybrief/housing-subscription-account-conversion-2026/02.png",
+      "result": "PASS",
+      "checks": [
+        "numeric-unit:PASS",
+        "difference-safe-area:PASS",
+        "png-dimension:PASS",
+        "png-nonempty:PASS"
+      ],
+      "pngMeta": {
+        "width": 1200,
+        "height": 675,
+        "bytes": 115051
+      }
+    },
     {
       "source": "housing-supply-813-2026/body-02.json",
       "png": "posts/moneybrief/housing-supply-813-2026/02.png",
