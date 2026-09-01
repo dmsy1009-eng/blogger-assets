@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#f3f8fa"/>
+    </linearGradient>
+    <linearGradient id="navy" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#071a3d"/>
+      <stop offset="1" stop-color="#0c2d62"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0a2342" flood-opacity="0.12"/>
+    </filter>
+    <style>
+      .kr{font-family:'Noto Sans CJK KR','Noto Sans KR',sans-serif;}
+      .headline{font-size:70px;font-weight:900;fill:#071a3d;letter-spacing:-3px;}
+      .subtitle{font-size:31px;font-weight:700;fill:#506579;letter-spacing:-1px;}
+      .badge{font-size:21px;font-weight:800;fill:#0b2752;}
+    </style>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <circle cx="1030" cy="250" r="245" fill="#eaf6f8"/>
+
+  <g transform="translate(34,30)" filter="url(#shadow)">
+    <rect width="310" height="78" rx="20" fill="url(#navy)"/>
+    <rect width="8" height="78" rx="4" fill="#11b3ad"/>
+    <text x="36" y="51" class="kr" font-size="34" font-weight="900" fill="#ffffff">머니브리프</text>
+  </g>
+
+  <text x="42" y="247" class="kr headline">청약통장 전환</text>
+  <text x="42" y="352" class="kr headline"><tspan fill="#0f9c9a">9월 30일</tspan> 마감</text>
+  <text x="42" y="430" class="kr subtitle">예금·부금·저축 → 주택청약종합저축</text>
+
+  <g transform="translate(42,520)" filter="url(#shadow)">
+    <rect width="205" height="66" rx="22" fill="#ffffff" stroke="#dbe5ea" stroke-width="2"/>
+    <circle cx="35" cy="33" r="20" fill="#0f9c9a"/>
+    <text x="35" y="41" text-anchor="middle" class="kr" font-size="18" font-weight="900" fill="#fff">✓</text>
+    <text x="66" y="41" class="kr badge">2026.09.30</text>
+  </g>
+  <g transform="translate(263,520)" filter="url(#shadow)">
+    <rect width="240" height="66" rx="22" fill="#ffffff" stroke="#dbe5ea" stroke-width="2"/>
+    <circle cx="35" cy="33" r="20" fill="#0f9c9a"/>
+    <text x="35" y="41" text-anchor="middle" class="kr" font-size="18" font-weight="900" fill="#fff">+</text>
+    <text x="66" y="41" class="kr badge">청약유형 확대</text>
+  </g>
+  <g transform="translate(519,520)" filter="url(#shadow)">
+    <rect width="260" height="66" rx="22" fill="#ffffff" stroke="#dbe5ea" stroke-width="2"/>
+    <circle cx="35" cy="33" r="20" fill="#0f9c9a"/>
+    <text x="35" y="41" text-anchor="middle" class="kr" font-size="18" font-weight="900" fill="#fff">!</text>
+    <text x="66" y="41" class="kr badge">실적 인정 주의</text>
+  </g>
+
+  <g transform="translate(825,128)" filter="url(#shadow)">
+    <rect x="0" y="40" width="285" height="350" rx="30" fill="#ffffff" stroke="#d7e3ea" stroke-width="3"/>
+    <path d="M0 72 Q0 40 32 40 H253 Q285 40 285 72 V122 H0 Z" fill="url(#navy)"/>
+    <text x="142" y="105" text-anchor="middle" class="kr" font-size="30" font-weight="900" fill="#ffffff">2026년 9월</text>
+    <text x="142" y="267" text-anchor="middle" class="kr" font-size="126" font-weight="900" fill="#0f9c9a">30</text>
+    <rect x="71" y="303" width="142" height="60" rx="19" fill="#0f9c9a"/>
+    <text x="142" y="344" text-anchor="middle" class="kr" font-size="30" font-weight="900" fill="#ffffff">전환 마감</text>
+  </g>
+
+  <g transform="translate(815,480)" opacity="0.9">
+    <path d="M40 80 L140 5 L240 80" fill="none" stroke="#0b2752" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M72 72 V170 H208 V72" fill="#ffffff" stroke="#0b2752" stroke-width="10" stroke-linejoin="round"/>
+    <rect x="122" y="112" width="42" height="58" rx="6" fill="#0f9c9a"/>
+  </g>
+</svg>
