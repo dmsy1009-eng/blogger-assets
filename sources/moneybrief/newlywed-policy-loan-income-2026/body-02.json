@@ -1,0 +1,21 @@
+{
+  "type": "comparison",
+  "title": "버팀목 전세자금 소득기준",
+  "subtitle": "8·13 대책에서 발표된 신혼부부 결혼 페널티 완화",
+  "field1Label": "소득 판단",
+  "field2Label": "핵심 기준",
+  "left": {
+    "label": "기존",
+    "rate": "합산",
+    "monthly": "부부합산",
+    "annual": "7,500만원 이하"
+  },
+  "right": {
+    "label": "개선안",
+    "rate": "1인",
+    "monthly": "부부 중 1인",
+    "annual": "5,000만원 이하"
+  },
+  "difference": "혼인신고 후 신청 시 1인 기준 적용 방향",
+  "note": "2026년 8월 13일 정부 발표 개선안이며 실제 접수 전 시행 여부 확인 필요"
+}
