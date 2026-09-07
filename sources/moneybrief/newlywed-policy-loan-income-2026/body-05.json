@@ -1,0 +1,11 @@
+{
+  "type": "comparison",
+  "title": "신청 전 마지막 체크",
+  "subtitle": "발표안과 실제 접수기준은 반드시 구분하세요",
+  "field1Label": "확인 항목",
+  "field2Label": "판정 기준",
+  "left": {"label":"정책 발표","rate":"8·13","monthly":"소득기준 완화","annual":"개선 방향 발표"},
+  "right": {"label":"실제 신청","rate":"접수일","monthly":"시행 여부 확인","annual":"공식 상품기준 확인"},
+  "difference": "소득 외 무주택·자산·대상주택 요건도 함께 확인",
+  "note": "정책 발표일과 실제 시행일은 다를 수 있으므로 주택도시기금 최신 공고 확인"
+}
