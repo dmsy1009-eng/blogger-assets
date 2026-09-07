@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-02T22:59:22.781Z",
+  "generatedAt": "2026-09-07T09:29:18.640Z",
   "result": "PASS",
   "gate": "SOURCE_PASS -> RENDER_PASS -> VISUAL_QA_PASS",
   "policy": {
@@ -114,6 +114,70 @@
         "width": 1200,
         "height": 675,
         "bytes": 108189
+      }
+    },
+    {
+      "source": "newlywed-policy-loan-income-2026/body-02.json",
+      "png": "posts/moneybrief/newlywed-policy-loan-income-2026/02.png",
+      "result": "PASS",
+      "checks": [
+        "numeric-unit:PASS",
+        "difference-safe-area:PASS",
+        "png-dimension:PASS",
+        "png-nonempty:PASS"
+      ],
+      "pngMeta": {
+        "width": 1200,
+        "height": 675,
+        "bytes": 96865
+      }
+    },
+    {
+      "source": "newlywed-policy-loan-income-2026/body-03.json",
+      "png": "posts/moneybrief/newlywed-policy-loan-income-2026/03.png",
+      "result": "PASS",
+      "checks": [
+        "numeric-unit:PASS",
+        "difference-safe-area:PASS",
+        "png-dimension:PASS",
+        "png-nonempty:PASS"
+      ],
+      "pngMeta": {
+        "width": 1200,
+        "height": 675,
+        "bytes": 97010
+      }
+    },
+    {
+      "source": "newlywed-policy-loan-income-2026/body-04.json",
+      "png": "posts/moneybrief/newlywed-policy-loan-income-2026/04.png",
+      "result": "PASS",
+      "checks": [
+        "numeric-unit:PASS",
+        "difference-safe-area:PASS",
+        "png-dimension:PASS",
+        "png-nonempty:PASS"
+      ],
+      "pngMeta": {
+        "width": 1200,
+        "height": 675,
+        "bytes": 103936
+      }
+    },
+    {
+      "source": "newlywed-policy-loan-income-2026/body-05.json",
+      "png": "posts/moneybrief/newlywed-policy-loan-income-2026/05.png",
+      "result": "PASS",
+      "checks": [
+        "numeric-unit:PASS",
+        "difference-safe-area:PASS",
+        "png-dimension:PASS",
+        "png-nonempty:PASS"
+      ],
+      "pngMeta": {
+        "width": 1200,
+        "height": 675,
+        "bytes": 101231
       }
     },
     {
